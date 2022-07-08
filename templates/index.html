@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Image Classification</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <!-- <link rel= "stylesheet" type= "text/css" href= "style.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <section class="header">
+      <video autoplay loop class="video-background" muted plays-inline>
+        <source src="{{ url_for('static',filename='tb.mp4') }}" type="video/mp4">
+      </video>
+
+    <h1 class="jumbotron bg-primary">Automatic T.B. Detection Module</h1>
+    <div class="container">
+      <br /><br />
+      <form
+        class="form-horizontal"
+        action="/predict"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd"
+            >Upload Your Image for Analysis:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="file"
+              class="form-control"
+              placeholder="Hours Studied"
+              name="my_image"
+              id="pwd"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+        </div>
+      </form>
+
+      {% if prediction %}
+      <!-- {{img_path}} -->
+      <img src="{{img_path}}"  width="210px" />
+      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Chest_X-ray_of_patchy_opacities_of_pulmonary_tuberculosis.jpg"  width="210px" /> -->
+      <h2 class="pre">Your Prediction : <i> {{prediction}} </i></h2>
+      <!-- <h2 class="pre">Your Prediction : <i> T.B. Infected</i></h2> -->
+
+      {% endif %}
+
+      
+      <div class="created-by">
+        <h1>Designed By:</h1>
+        <ul>
+          <li>Shivnanadan Rai</li>
+          <li>Abhimanyu Kumar Bharti</li>
+          <li>Debasish Debroy</li>
+          <li>Yuvraj Das</li>
+        </ul>
+        <h2>Under The Guidance:</h2>
+        <ul>
+          <li>Mr. Richik Kashyap</li>
+          <li>Mr. Nirupam Shome</li>
+        </ul>
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/6e/Assam_University_Logo.png" alt="">
+        <p>Dept of E.C.E</p>
+        <h3>Assam University Silchar</h3>
+      </div>
+    </div>
+    <div class="blur"></div>
+    </section>
+  </body>
+</html>

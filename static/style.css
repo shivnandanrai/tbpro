@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    height: 165vh;
+    background-color: rgba(42, 42, 43, 0.4);
+}
+.video-background{
+    position: absolute;
+    right: 0;
+    top: 120px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+@media (max-aspect-ratio:16/9) {
+    .video-background{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+.jumbotron{
+    font-size: 3rem;
+    width: 100%;
+    height: 130px;
+    color :#fff;
+    background-color:#145e66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Smokum', cursive;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    line-height: 40px;
+}
+form{
+    text-align: center;
+    background-color: #2065c5;
+    height: 200px;
+    width: 55%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: rgb(245, 240, 240);
+}
+.form-group{
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+.form-group label{
+    display: block;
+    margin: 10px 0;
+}
+.btn-success{
+    width: 100px;
+    height: 30px;
+    border: 0;
+    border-radius: 20px;
+    background-color: lightgreen;
+    font-size: 15px;
+    box-shadow: 0 0 5px;
+    cursor: pointer;
+    color: rgb(76, 0, 255);
+}
+.pre{
+    margin: 10px 0;
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.blur{
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(1px);
+}
+.created-by{
+    width: 380px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 55px 0 50px 0;
+    text-align: center;
+    margin: 100px auto 20px auto;
+}
+.created-by ul{
+    text-align: left;
+    margin: 10px 80px;
+    list-style-type: none;
+}
+.created-by p{
+    font-size: 1.1rem;
+}
+.created-by img{
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+}
