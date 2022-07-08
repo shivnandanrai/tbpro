@@ -1,3 +1,4 @@
 flask
 keras
 numpy
+sklearn
