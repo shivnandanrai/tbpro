@@ -1,5 +1,5 @@
 flask
-keras
 numpy
 sklearn
-tensorflow.keras
+tensorflow.keras.models
+tensorflow.keras.preprocessing
